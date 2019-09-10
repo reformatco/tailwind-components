@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tailwind Components</title>
+  <link rel="stylesheet" href="~/src/style.css">
+</head>
+<body>
+
+  <section class="w-full relative">
+    <figure class="flex flex-col items-center justify-center text-center py-16 md:py-24 bg-blue-500 text-white w-full">
+      <div class="w-3/4 md:w-1/2 leading-tight text-2xl">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis itaque minima, architecto maxime veniam enim tenetur voluptas ea rerum aliquam vitae nesciunt dolorem repellat voluptatibus sit earum voluptates hic labore.</p>
+      </div>
+    </figure>
+    <!-- pager -->
+    <ol class="absolute z-10 w-full -my-6 list-reset flex justify-center">
+      <li><a href="#" class="block mx-1 w-2 h-2 bg-white border border-solid border-white rounded-full active"></a></li>
+      <li><a href="#" class="block mx-1 w-2 h-2 bg-transparent border border-solid border-white rounded-full"></a></li>
+      <li><a href="#" class="block mx-1 w-2 h-2 bg-transparent border border-solid border-white rounded-full"></a></li>
+    </ol>
+  </section>
+
+  <script src="~/src/index.js"></script>
+</body>
+</html>

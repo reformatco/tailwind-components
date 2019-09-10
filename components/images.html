@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tailwind Components</title>
+  <link rel="stylesheet" href="~/src/style.css">
+</head>
+<body>
+
+  <figure class="mb-8">
+    <picture>
+      <source srcset="//placehold.it/1280x640" media="(min-width:1280px)">
+      <source srcset="//placehold.it/1024x480" media="(min-width:1024px)">
+      <source srcset="//placehold.it/768x480" media="(min-width:768px)">
+      <img src="//placehold.it/375x375" alt="" class="block w-full h-auto">
+    </picture>
+  </figure>
+
+  <div class="container mx-auto px-4 mb-8">
+    <div class="md:flex md:-mx-4">
+      <!-- allows equal widths just add more items -->
+      <figure class="mb-8 md:px-4 md:flex-1">
+        <picture>
+          <!-- this will fit all sizes -->
+          <source srcset="//placehold.it/1280x640" media="(min-width:1280px)">
+          <source srcset="//placehold.it/1024x480" media="(min-width:1024px)">
+          <source srcset="//placehold.it/768x480" media="(min-width:768px)">
+          <img src="//placehold.it/375x375" alt="" class="block w-full h-auto">
+        </picture>
+      </figure>
+      <figure class="mb-8 md:px-4 md:flex-1">
+        <picture>
+          <source srcset="//placehold.it/1280x640" media="(min-width:1280px)">
+          <source srcset="//placehold.it/1024x480" media="(min-width:1024px)">
+          <source srcset="//placehold.it/768x480" media="(min-width:768px)">
+          <img src="//placehold.it/375x375" alt="" class="block w-full h-auto">
+        </picture>
+      </figure>
+    </div>
+  </div>
+
+  <script src="~/src/index.js"></script>
+</body>
+</html>

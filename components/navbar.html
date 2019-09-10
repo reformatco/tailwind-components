@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tailwind Components</title>
+  <link rel="stylesheet" href="~/src/style.css">
+</head>
+<body>
+
+  <header class="fixed bg-black text-white z-50 w-full p-4 top-0">
+    <div class="container mx-auto px-4">
+      <div class="flex -mx-4 justify-between">
+        <a class="w-8 z-50" href="#" aria-title="Sitename">
+          <svg class="fill-current w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 0H6L0 3v6l4-1v12h12V8l4 1V3l-6-3h-1a3 3 0 0 1-6 0z"/></svg>
+        </a>
+        <nav class="" role="navigation">
+          <ul class="list-reset inline-flex">
+            <li><a href="#" class="mx-2">Page</a></li>
+            <li><a href="#" class="mx-2">Page</a></li>
+            <li><a href="#" class="mx-2">Page</a></li>
+          </ul>
+        </nav>
+        <div class="inline-flex items-center">
+          <div class="w-8 h-8 mx-4 relative flex flex-col cursor-pointer" aria-role="button" aria-label="Toggle search">
+            <svg class="fill-current w-full h-full px-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+            <svg class="fill-current w-full h-full px-1 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+          </div>
+          <div class="w-8 h-8 relative flex flex-col cursor-pointer z-50" aria-role="button" aria-label="Toggle navigation">
+            <svg class="fill-current w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            <svg class="fill-current w-full h-full px-1 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search modal -->
+    <div class="bg-white text-gray-900 w-full absolute left-0 mt-4 hidden">
+      <div class="mx-4 md:mx-auto md:w-1/2 py-8 md:py-16">
+        <form action="#" class="w-full relative">
+          <label for="site-search" class="invisible absolute">Search the site:</label>
+          <input class="w-full leading-none h-16 p-4 pr-12 text-xl md:text-2xl border-gray-300 border-b border-solid focus:border-blue-500 outline-none" type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search">
+          <button class="absolute z-10 mt-2 outline-none right-0 text-gray-500 hover:text-blue-500 focus:text-blue-500 w-12 h-12">
+            <svg class="fill-current w-full h-full p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"/></svg>
+            <span class="hidden">Search</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- nav modal -->
+    <div class="bg-black absolute top-0 left-0 w-full h-screen flex flex-col justify-center">
+      <div class="container mx-auto px-4">
+        <nav>
+          <ul class="text-4xl leading-tight w-full">
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li>
+              <a href="#" class="w-1/2">Item</a>
+              <div class="absolute bg-gray-500 w-1/2 h-screen top-0 flex items-center text-black px-8 right-0">
+                <ul>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <script src="~/src/index.js"></script>
+</body>
+</html>
