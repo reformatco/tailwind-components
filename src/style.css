@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.transition {
+  transition: all .33s;
+}
