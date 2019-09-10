@@ -9,27 +9,88 @@
 </head>
 <body>
   
-  <div class="container mx-auto">
-    
-    <h2 class="my-8 font-bold text-2xl">Pullout(aside)</h2>
-
-    <section class="w-full relative">
-      <figure class="flex flex-col items-center justify-center text-center py-16 md:py-24 bg-blue-500 text-white w-full">
-        <div class="w-3/4 md:w-1/2 leading-tight text-2xl">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis itaque minima, architecto maxime veniam enim tenetur voluptas ea rerum aliquam vitae nesciunt dolorem repellat voluptatibus sit earum voluptates hic labore.</p>
+  <header class="fixed bg-black text-white z-50 w-full p-4 top-0">
+    <div class="container mx-auto px-4">
+      <div class="flex -mx-4 justify-between">
+        <a class="w-8 z-50" href="#" aria-title="Sitename">
+          <svg class="fill-current w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 0H6L0 3v6l4-1v12h12V8l4 1V3l-6-3h-1a3 3 0 0 1-6 0z"/></svg>
+        </a>
+        <nav class="" role="navigation">
+          <ul class="list-reset inline-flex">
+            <li><a href="#" class="mx-2">Page</a></li>
+            <li><a href="#" class="mx-2">Page</a></li>
+            <li><a href="#" class="mx-2">Page</a></li>
+          </ul>
+        </nav>
+        <div class="inline-flex items-center">
+          <div class="w-8 h-8 mx-4 relative flex flex-col cursor-pointer" aria-role="button" aria-label="Toggle search">
+            <svg class="fill-current w-full h-full px-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/></svg>
+            <svg class="fill-current w-full h-full px-1 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+          </div>
+          <div class="w-8 h-8 relative flex flex-col cursor-pointer z-50" aria-role="button" aria-label="Toggle navigation">
+            <svg class="fill-current w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            <svg class="fill-current w-full h-full px-1 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+          </div>
         </div>
-      </figure>
-      <!-- pager -->
-      <ol class="absolute z-10 w-full -my-6 list-reset flex justify-center">
-        <li><a href="#" class="block mx-1 w-2 h-2 bg-white border border-solid border-white rounded-full active"></a></li>
-        <li><a href="#" class="block mx-1 w-2 h-2 bg-transparent border border-solid border-white rounded-full"></a></li>
-        <li><a href="#" class="block mx-1 w-2 h-2 bg-transparent border border-solid border-white rounded-full"></a></li>
-      </ol>
-    </section>
+      </div>
+    </div>
+    <!-- search modal -->
+    <div class="bg-white text-gray-900 w-full absolute left-0 mt-4 hidden">
+      <div class="mx-4 md:mx-auto md:w-1/2 py-8 md:py-16">
+        <form action="#" class="w-full relative">
+          <label for="site-search" class="invisible absolute">Search the site:</label>
+          <input class="w-full leading-none h-16 p-4 pr-12 text-xl md:text-2xl border-gray-300 border-b border-solid focus:border-blue-500 outline-none" type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search">
+          <button class="absolute z-10 mt-2 outline-none right-0 text-gray-500 hover:text-blue-500 focus:text-blue-500 w-12 h-12">
+            <svg class="fill-current w-full h-full p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"/></svg>
+            <span class="hidden">Search</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- nav modal -->
+    <div class="bg-black absolute top-0 left-0 w-full h-screen flex flex-col justify-center">
+      <div class="container mx-auto px-4">
+        <nav>
+          <ul class="text-4xl leading-tight w-full">
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li>
+              <a href="#" class="w-1/2">Item</a>
+              <div class="absolute bg-gray-500 w-1/2 h-screen top-0 flex items-center text-black px-8 right-0">
+                <ul>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                  <li><a href="#">Item</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <h2 class="my-8 font-bold text-2xl">Feature</h2>
+  <h2 class="my-8 font-bold text-2xl">Pullout(aside)</h2>
 
-    <section class="py-16 w-full bg-gray-200">
+  <section class="w-full relative">
+    <figure class="flex flex-col items-center justify-center text-center py-16 md:py-24 bg-blue-500 text-white w-full">
+      <div class="w-3/4 md:w-1/2 leading-tight text-2xl">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis itaque minima, architecto maxime veniam enim tenetur voluptas ea rerum aliquam vitae nesciunt dolorem repellat voluptatibus sit earum voluptates hic labore.</p>
+      </div>
+    </figure>
+    <!-- pager -->
+    <ol class="absolute z-10 w-full -my-6 list-reset flex justify-center">
+      <li><a href="#" class="block mx-1 w-2 h-2 bg-white border border-solid border-white rounded-full active"></a></li>
+      <li><a href="#" class="block mx-1 w-2 h-2 bg-transparent border border-solid border-white rounded-full"></a></li>
+      <li><a href="#" class="block mx-1 w-2 h-2 bg-transparent border border-solid border-white rounded-full"></a></li>
+    </ol>
+  </section>
+
+  <h2 class="my-8 font-bold text-2xl">Feature</h2>
+
+  <section class="py-16 w-full bg-gray-200">
+    <div class="container mx-auto px-4">
       <div class="w-full md:flex md:-mx-4 md:justify-center">
         <!-- single -->
         <article class="md:px-4 flex flex-col items-center text-center md:w-1/4">
@@ -68,15 +129,16 @@
           </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <h2 class="my-8 font-bold text-2xl">Feature (alt)</h2>
-
-    <section class="py-16 w-full bg-blue-500 text-white">
+  <!-- alt -->
+  <section class="py-16 w-full bg-blue-500 text-white">
+    <div class="container mx-auto px-4">
       <div class="w-full md:flex md:-mx-4 md:justify-center">
         <!-- single -->
         <article class="md:px-4 flex flex-col items-center text-center md:w-1/4">
-          <a href="#" class="block w-32 h-32 rounded-full mb-8">
+          <a href="#" class="block w-20 h-20 rounded-full mb-8">
             <img src="//placehold.it/200x200" alt="" class="block rounded-full">
           </a>
           <header class="mb-4">
@@ -88,7 +150,19 @@
         </article>
         <!-- single -->
         <article class="md:px-4 flex flex-col items-center text-center md:w-1/4">
-          <a href="#" class="block w-32 h-32 rounded-full mb-8">
+          <a href="#" class="block w-20 h-20 rounded-full mb-8">
+            <img src="//placehold.it/200x200" alt="" class="block rounded-full">
+          </a>
+          <header class="mb-4">
+            <h3 class="text-2xl font-bold"><a href="#">Feature Header</a></h3>
+          </header>
+          <div class="mb-8 md:mb-0">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde obcaecati excepturi porro vel molestias incidunt voluptas ipsa consequuntur ea nesciunt vero corporis consequatur fugit minus, eveniet veritatis quibusdam amet pariatur?</p>
+          </div>
+        </article>
+        <!-- single -->
+        <article class="md:px-4 flex flex-col items-center text-center md:w-1/4">
+          <a href="#" class="block w-20 h-20 rounded-full mb-8">
             <img src="//placehold.it/200x200" alt="" class="block rounded-full">
           </a>
           <header class="mb-4">
@@ -99,11 +173,10 @@
           </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <h2 class="my-8 font-bold text-2xl">Facts</h2>
-    
-  </div>
+  <h2 class="my-8 font-bold text-2xl">Facts</h2>
 
   <section class="w-full h-screen relative">
     <figure class="w-full h-full relative">
@@ -114,8 +187,8 @@
         <img src="//placehold.it/375x375" alt="" class="block w-full h-full object-cover object-center">
       </picture>
       <figcaption class="z-10 absolute w-full h-full top-0 py-16">
-        <div class="container mx-auto">
-          <div class="md:w-1/2">
+        <div class="container mx-auto px-4">
+          <div class="md:w-2/3 lg:w-1/2">
             <div class="inline-flex items-center font-bold mb-4 uppercase tracking-wide">
               <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 13.33a7 7 0 1 1 6 0V16H7v-2.67zM7 17h6v1.5c0 .83-.67 1.5-1.5 1.5h-3A1.5 1.5 0 0 1 7 18.5V17zm2-5.1V14h2v-2.1a5 5 0 1 0-2 0z"/></svg>
               <span>Did you know</span>
@@ -149,7 +222,7 @@
           <h2 class="text-3xl font-bold leading-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt consequuntur modi ex cum accusantium!</h2>
         </div>
         <div class="absolute w-full bottom-0 mb-16">
-          <div class="container mx-auto">
+          <div class="container mx-auto px-4">
             <aside class="md:w-1/3">
               <h3 class="block font-bold mb-4 uppercase tracking-wide"><a href="#" class="hover:underline focus:underline">Protection</a></h3>
               <p class="leading-tight text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur, sequi amet repellat possimus illo dolores.</p>
@@ -166,7 +239,7 @@
     </ol>
   </section>
 
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
 
       <h2 class="my-8 font-bold text-2xl">Buttons</h2>
 
@@ -184,14 +257,59 @@
 
   </div>
 
-  <section class="py-16">
-    <div class="container mx-auto">
+  <section class="pt-16 pb-8 lg:py-16">
+    <div class="container mx-auto px-4">
       <header class="mb-8"><h2 class="font-bold text-2xl">Related</h2></header>
-      <div class="md:flex md:-mx-4">
+      <div class="md:flex md:-mx-4 md:flex-wrap">
 
-        <article class="md:w-1/4 md:px-4">
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
           <a href="#" class="block mb-4">
-            <img src="//placehold.it/320x240" alt="">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-500 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-gray-500 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-500 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-gray-500 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-500 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-gray-500 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
           </a>
           <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
             <li class="px-2"><a href="#" class="text-blue-500 hover:underline focus:underline">Protection</a></li>
@@ -208,5 +326,163 @@
     </div>
   </section>
 
+  <header class="mb-8 w-full"><h2 class="font-bold text-2xl">Heading</h2></header>
+
+  <section class="pt-16 pb-8 lg:py-16 bg-blue-500 text-white">
+    <div class="container mx-auto px-4">
+      <header class="mb-8 w-full"><h2 class="font-bold text-2xl">Related</h2></header>
+      <div class="md:flex md:-mx-4">
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-900 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-blue-200 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-900 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-blue-200 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-900 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-blue-200 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+        <article class="md:w-1/2 lg:w-1/4 md:px-4 mb-8 lg:mb-0">
+          <a href="#" class="block mb-4">
+            <img src="//placehold.it/320x240" alt="" class="w-full h-auto">
+          </a>
+          <ul class="block font-bold mb-4 uppercase text-sm tracking-wide inline-flex -mx-2 flex-wrap">
+            <li class="px-2"><a href="#" class="text-blue-900 hover:underline focus:underline">Protection</a></li>
+          </ul>
+          <h3 class="font-bold mb-4 text-xl leading-tight"><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></h3>
+          <p class="leading-tight">Quod nisi illo repellat est odit tempore rerum doloremque dolore, ex accusantium aliquid dicta architecto aperiam! Delectus quis aut fugit facilis tenetur!</p>
+          <p class="text-sm text-blue-200 mt-4 inline-flex items-center">
+            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M1 4c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm2 2v12h14V6H3zm2-6h2v2H5V0zm8 0h2v2h-2V0zM5 9h2v2H5V9zm0 4h2v2H5v-2zm4-4h2v2H9V9zm0 4h2v2H9v-2zm4-4h2v2h-2V9zm0 4h2v2h-2v-2z"/></svg>
+            <time datetime="">20 February 2019</time>
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="container mx-auto px-4">
+      <h2 class="my-8 font-bold text-2xl">Images</h2>
+  </div>
+
+  <figure class="mb-8">
+    <picture>
+      <source srcset="//placehold.it/1280x640" media="(min-width:1280px)">
+      <source srcset="//placehold.it/1024x480" media="(min-width:1024px)">
+      <source srcset="//placehold.it/768x480" media="(min-width:768px)">
+      <img src="//placehold.it/375x375" alt="" class="block w-full h-auto">
+    </picture>
+  </figure>
+
+  <div class="container mx-auto px-4 mb-8">
+    <div class="md:flex md:-mx-4">
+      <!-- allows equal widths just add more items -->
+      <figure class="mb-8 md:px-4 md:flex-1">
+        <picture>
+          <!-- this will fit all sizes -->
+          <source srcset="//placehold.it/1280x640" media="(min-width:1280px)">
+          <source srcset="//placehold.it/1024x480" media="(min-width:1024px)">
+          <source srcset="//placehold.it/768x480" media="(min-width:768px)">
+          <img src="//placehold.it/375x375" alt="" class="block w-full h-auto">
+        </picture>
+      </figure>
+      <figure class="mb-8 md:px-4 md:flex-1">
+        <picture>
+          <source srcset="//placehold.it/1280x640" media="(min-width:1280px)">
+          <source srcset="//placehold.it/1024x480" media="(min-width:1024px)">
+          <source srcset="//placehold.it/768x480" media="(min-width:768px)">
+          <img src="//placehold.it/375x375" alt="" class="block w-full h-auto">
+        </picture>
+      </figure>
+    </div>
+  </div>
+
+  <section class="pt-16 pb-12 bg-gray-200">
+    <div class="container mx-auto px-4">
+      <header class="mb-8 w-full flex justify-center"><h2 class="font-bold text-2xl">Statistics</h2></header>
+      <div class="md:flex md:-mx-4 md:justify-center md:items-center md:flex-wrap">
+       
+        <div class="flex justify-center md:block mb-4 md:px-4">
+          <div class="rounded-full bg-gray-500 text-white w-48 h-48">
+            <div class="flex flex-col items-center justify-center p-4 w-full h-full">
+              <div class="font-bold uppercase text-xs text-center tracking-wide leading-none">Something here</div>
+              <div class="font-semibold my-2 text-5xl md:text-4xl leading-none">1,234</div>
+              <div class="font-bold uppercase text-xs tracking-wide leading-none">Done</div>
+            </div>
+          </div>
+       </div>
+
+       <div class="flex justify-center md:block mb-4 md:px-4">
+          <div class="rounded-full bg-white text-gray-700 w-64 h-64">
+            <div class="flex flex-col items-center justify-center p-4 w-full h-full">
+              <div class="font-bold uppercase text-sm tracking-wide leading-none">Something here</div>
+              <div class="font-semibold my-2 text-6xl leading-none">98%</div>
+              <div class="font-bold uppercase text-sm tracking-wide leading-none">Done</div>
+            </div>
+          </div>
+       </div>
+      
+       <div class="flex justify-center md:block mb-4 md:px-4">
+          <div class="rounded-full bg-blue-500 text-white w-64 h-64">
+            <div class="flex flex-col items-center justify-center p-4 w-full h-full">
+              <div class="font-bold uppercase text-sm tracking-wide leading-none">Something here</div>
+              <div class="font-semibold my-2 text-6xl leading-none">98%</div>
+              <div class="font-bold uppercase text-sm tracking-wide leading-none">Done</div>
+            </div>
+          </div>
+       </div>
+
+       <!-- small -->
+       <div class="flex justify-center md:block mb-4 md:px-4">
+          <div class="rounded-full bg-gray-500 text-white w-48 h-48">
+            <div class="flex flex-col items-center justify-center p-4 w-full h-full">
+              <div class="font-bold uppercase text-xs text-center tracking-wide leading-none">Something here</div>
+              <div class="font-semibold my-2 text-5xl md:text-4xl leading-none">1,234</div>
+              <div class="font-bold uppercase text-xs tracking-wide leading-none">Done</div>
+            </div>
+          </div>
+       </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="./src/index.js"></script>
 </body>
 </html>
