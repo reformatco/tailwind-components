@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tailwind Components</title>
+  <link rel="stylesheet" href="~/src/style.css">
+</head>
+<body>
+
+  <div class="container mx-auto px-4">
+    <div class="mt-16 flex items-center justify-between text-black font-bold">
+      <a href="#" class="block w-8 h-8 mr-4 bg-blue-500 hover:bg-black focus:bg-black rounded-full text-white" aria-role="button" aria-label="Scroll down">
+        <svg class="fill-current w-full h-full p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.828 9l6.071-6.071-1.414-1.414L0 10l.707.707 7.778 7.778 1.414-1.414L3.828 11H20V9H3.828z"/></svg>
+      </a>
+
+      <nav class="flex-1" role="navigation" aria-label="Pagination Navigation">
+        <ul class="flex justify-center">
+          <li><a href="#" class="opacity-50 mx-2 hover:text-blue-500 focus:text-blue-500 hover:opacity-100 focus:opacity-100">1</a></li>
+          <li><a href="#" class="opacity-50 mx-2 hover:text-blue-500 focus:text-blue-500 hover:opacity-100 focus:opacity-100">2</a></li>
+          <li><a href="#" class="opacity-50 mx-2 hover:text-blue-500 focus:text-blue-500 hover:opacity-100 focus:opacity-100">&hellip;</a></li>
+          <li><a href="#" class="mx-2 text-blue-500 cursor-default" aria-label="Current Page, Page 4" aria-current="true">4</a></li>
+          <li><a href="#" class="opacity-50 mx-2 hover:text-blue-500 focus:text-blue-500 hover:opacity-100 focus:opacity-100">5</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="block w-8 h-8 ml-4 bg-blue-500 hover:bg-black focus:bg-black rounded-full text-white" aria-role="button" aria-label="Scroll down">
+        <svg class="fill-current w-full h-full p-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <script src="~/src/index.js"></script>
+</body>
+</html>
